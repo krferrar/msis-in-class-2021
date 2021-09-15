@@ -11,6 +11,8 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
     <title>Hello, world!</title>
+
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -45,8 +47,30 @@
           <div class="col col-4">
             One of three columns
           </div>
-          <div class="col col-8">
-            One of three columns
+          <div id="offerApp" class="col col-8">
+            <!-- One of three columns
+            <p>{{ 2 + 3 * 4}}</p>
+            <p>{{ dummy }}</p>
+            <p>{{ total }}</p>
+            <ul>
+              <li v-for="thing in list">{{ thing }}</li>
+            </ul> -->
+
+            <!-- <p>{{person.name.first}} {{person.name.last}}</p>
+
+            <p><a v-bind:hfref="'mailto:'+person.email"></a>{{person.email}}</p> -->
+            {{person}}
+            <!-- <table>
+              <tbody>
+                <tr v-for="offer in offers">
+                    <td>{{ offer.name }}</td>
+                    <td>{{ offer.salary }}</td>
+                    <td>{{ offer.bonus }}</td>
+                    <td>{{ offer.company }}</td>
+                    <td>{{ offer.offerDate }}</td>
+                </tr>
+              </tbody>
+            </table> -->
           </div>
 
         </div>
@@ -54,5 +78,6 @@
     <!--  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
+    <script src="js/index.js"></script>
   </body>
 </html>
