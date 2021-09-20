@@ -48,15 +48,15 @@
             One of three columns
           </div>
           <div id="offerApp" class="col col-8">
-            <p>{{ 2 + 3 * 4}}</p>
-            <p>{{ dummy }}</p>
-            <p>{{ total }}</p>
+            
+            <form v-on:submit.prevent="fetchUserData">
+              <button type="submit">Reload</button>
+            </form>
             <ul>
               <li v-for="thing in list">{{ thing }}</li>
             </ul>
 
             <p>{{person.name.first}} {{person.name.last}}</p>
-
             <p><a v-bind:hfref="'mailto:'+person.email"></a>{{person.email}}</p>
           <p>{{this.person.dob.date}}</p>
           <p>{{prettyBirthday}}</p>
