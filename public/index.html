@@ -48,19 +48,20 @@
             One of three columns
           </div>
           <div id="offerApp" class="col col-8">
-            <!-- One of three columns
             <p>{{ 2 + 3 * 4}}</p>
             <p>{{ dummy }}</p>
             <p>{{ total }}</p>
             <ul>
               <li v-for="thing in list">{{ thing }}</li>
-            </ul> -->
+            </ul>
 
-            <!-- <p>{{person.name.first}} {{person.name.last}}</p>
+            <p>{{person.name.first}} {{person.name.last}}</p>
 
-            <p><a v-bind:hfref="'mailto:'+person.email"></a>{{person.email}}</p> -->
-            {{person}}
-            <!-- <table>
+            <p><a v-bind:hfref="'mailto:'+person.email"></a>{{person.email}}</p>
+          <p>{{this.person.dob.date}}</p>
+          <p>{{prettyBirthday}}</p>
+            <p>{{person}}</p> 
+            <table>
               <tbody>
                 <tr v-for="offer in offers">
                     <td>{{ offer.name }}</td>
@@ -70,14 +71,14 @@
                     <td>{{ offer.offerDate }}</td>
                 </tr>
               </tbody>
-            </table> -->
+            </table> 
           </div>
 
         </div>
 
     <!--  Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
