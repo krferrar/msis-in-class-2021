@@ -1,0 +1,5 @@
+MYSQL_DATABASE=inclassdb
+MYSQL_HOST=inclassdb.cgyqdckhhbbb.us-east-2.rds.amazonaws.com
+MYSQL_USER=msisadmin
+MYSQL_PASSWORD=Taylorgrace1101$
+
