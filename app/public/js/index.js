@@ -3,7 +3,8 @@ const SomeApp = {
       return {
         students: [],
         selectedStudent: null,
-        offers: []
+        offers: [],
+        offerForm: {}
       }
     },
     computed: {},
@@ -50,8 +51,29 @@ const SomeApp = {
             .catch( (error) => {
                 console.error(error);
             });
+        },
+        postNewOffer(evt) {
+            this.offerForm.studentId = this.selectedStudent.id;        
+            console.log("Posting:", this.offerForm);
+           
+
+        fetch('api/offer/create.php', {
+            method:'POST',
+            body: JSON.stringify(this.offerForm),
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            }
+         })
+         .then ( response => response.json())
+         .then ( json => {
+             console.log("Returned from post:", json);
+             this.offers = json;
+         });
+
         }
     },
+    
+
     created() {
         this.fetchStudentData();
     }
